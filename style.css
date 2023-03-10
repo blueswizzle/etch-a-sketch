@@ -3,29 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-}
 h1{
     text-align: center;
     margin-top: 1.5rem;
 }
-.grid-container{
-    border: 3px solid red;
+.container{
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
 }
+.controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .row{
     display: flex;
 }
 .box{
   width: 30px;
   height: 30px;
-  border: 1px solid black;
-  margin: 1px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  
 }
