@@ -3,3 +3,29 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+h1{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.grid-container{
+    border: 3px solid red;
+    display: flex;
+    flex-direction: row;
+    
+}
+.row{
+    display: flex;
+}
+.box{
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 1px;
+}
