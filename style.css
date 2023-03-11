@@ -17,15 +17,32 @@ h1{
 .controls{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+#reset-button{
+    margin-top: 1.5rem;
+    padding: 0.5em;
+    background-color:  #457b9d;
+    color: white;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+#reset-button:hover{
+    cursor: pointer;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+#grid-container{
+    display: inline-grid;
+    grid-template-columns: repeat(8, 2fr);
+    grid-template-rows: repeat(8, 2fr);
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 575px;
+    width: 575px;
 }
 
-.row{
-    display: flex;
-}
 .box{
-  width: 30px;
-  height: 30px;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
-  
 }
