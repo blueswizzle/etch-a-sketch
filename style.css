@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --click-color: black;
+}
 h1{
     text-align: center;
     margin-top: 1.5rem;
@@ -13,6 +16,7 @@ h1{
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+    padding-bottom: 1.5em;
 }
 .controls{
     display: flex;
@@ -23,7 +27,8 @@ h1{
 #reset-button{
     margin-top: 1.5rem;
     padding: 0.5em;
-    background-color:  #457b9d;
+    background-color:  #45979d;
+    
     color: white;
     font-size: 1.3rem;
     border: none;
@@ -31,7 +36,7 @@ h1{
 }
 #reset-button:hover{
     cursor: pointer;
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    background-color:  hsl(184, 87%, 47%);
 }
 #grid-container{
     display: inline-grid;

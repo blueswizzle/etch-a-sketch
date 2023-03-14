@@ -18,21 +18,26 @@ document.body.addEventListener("mouseup", () =>{
 createGrid(gridSize);
 
 
-gridSlider.oninput = () =>{
+gridSlider.addEventListener("input", () =>{
     gridSize = gridSlider.value;
     document.getElementById("size-label").innerHTML = `Grid Size: ${gridSize} x ${gridSize}`;
-}
-
+    console.log(gridSize);
+    removeBoxes();
+    createGrid(gridSize);
+})
 
 function createGrid(size){
     for(let i=0; i < size * size; i++){
         const box = document.createElement('div');
         box.classList.add("box");
+        grid.setAttribute('style', `grid-template-columns: repeat(${size}, 2fr); grid-template-rows: repeat(${size}, 2fr);`);
+        box.addEventListener("click", (e) =>{
+            e.target.style.backgroundColor = 'black';
+        })
         box.addEventListener("mouseover", (e) =>{
             if(mouseDown){
                 e.target.style.backgroundColor = 'black';
             }
-            
         });
         grid.appendChild(box);
     }
