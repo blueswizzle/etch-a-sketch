@@ -5,6 +5,7 @@ let gridSize = 8;
 const resetButton = document.getElementById("reset-button");
 const colorWheel = document.getElementById("color-wheel");
 let color = colorWheel.value;
+const toggleButton = document.getElementById("border-toggle");
 
 resetButton.addEventListener("click", resetGrid);
 document.body.addEventListener("mousedown", () => {
@@ -14,7 +15,12 @@ document.body.addEventListener("mouseup", () =>{
     mouseDown = false;
 })
 
-createGrid(gridSize);
+toggleButton.addEventListener("click", () =>{
+    let boxes = grid.children;
+    for(let i =0; i < gridSize * gridSize; i++){
+        boxes[i].classList.toggle('hidden');
+    }
+})
 
 
 colorWheel.addEventListener("change", () =>{
@@ -28,6 +34,8 @@ gridSlider.addEventListener("input", () =>{
     removeBoxes();
     createGrid(gridSize);
 })
+
+createGrid(gridSize);
 
 function createGrid(size){
     for(let i=0; i < size * size; i++){
