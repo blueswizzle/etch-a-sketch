@@ -3,9 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --click-color: black;
-}
+
 h1{
     text-align: center;
     margin-top: 1.5rem;
@@ -37,6 +35,9 @@ h1{
 #reset-button:hover{
     cursor: pointer;
     background-color:  hsl(184, 87%, 47%);
+}
+#color-wheel{
+    margin-top: 1.2rem;
 }
 #grid-container{
     display: inline-grid;

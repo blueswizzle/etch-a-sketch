@@ -3,7 +3,8 @@ let mouseDown = false;
 let gridSlider = document.getElementById("grid-size");
 let gridSize = 8;
 const resetButton = document.getElementById("reset-button");
-
+const colorWheel = document.getElementById("color-wheel");
+let color = colorWheel.value;
 
 resetButton.addEventListener("click", resetGrid);
 document.body.addEventListener("mousedown", () => {
@@ -17,6 +18,10 @@ document.body.addEventListener("mouseup", () =>{
 
 createGrid(gridSize);
 
+
+colorWheel.addEventListener("change", () =>{
+    color = colorWheel.value;
+})
 
 gridSlider.addEventListener("input", () =>{
     gridSize = gridSlider.value;
@@ -32,11 +37,11 @@ function createGrid(size){
         box.classList.add("box");
         grid.setAttribute('style', `grid-template-columns: repeat(${size}, 2fr); grid-template-rows: repeat(${size}, 2fr);`);
         box.addEventListener("click", (e) =>{
-            e.target.style.backgroundColor = 'black';
+            e.target.style.backgroundColor = color;
         })
         box.addEventListener("mouseover", (e) =>{
             if(mouseDown){
-                e.target.style.backgroundColor = 'black';
+                e.target.style.backgroundColor = color;
             }
         });
         grid.appendChild(box);
