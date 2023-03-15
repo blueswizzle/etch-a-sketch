@@ -9,11 +9,9 @@ let color = colorWheel.value;
 resetButton.addEventListener("click", resetGrid);
 document.body.addEventListener("mousedown", () => {
     mouseDown = true;
-    console.log(mouseDown);
 });
 document.body.addEventListener("mouseup", () =>{
     mouseDown = false;
-    console.log(mouseDown);
 })
 
 createGrid(gridSize);
